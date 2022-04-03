@@ -1,0 +1,34 @@
+/* Site-social */
+.social {
+    @include fontStyle(600, 11px, 15px, 0.02em);
+  
+    display: flex;
+    padding-left: 100px;
+    gap: 40px;
+  
+    color: $primary-color;
+  }
+  
+  .social__item {
+    display: flex;
+    align-items: center;
+  
+    &:first-child {
+      position: relative;
+  
+      &::before {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        top: 50%;
+        left: -100px;
+  
+        background-color: currentColor;
+      }
+    }
+  }
+  
+  .social__link {
+    @extend %link;
+  }
