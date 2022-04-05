@@ -1,0 +1,121 @@
+/* Reasons */
+.reasons {
+    @extend %section;
+    padding-bottom: calc(84px + 35px);
+    color: $primary-color;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        padding-bottom: calc(100px + 35px);
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-bottom: calc(130px + 35px);
+    }
+}
+
+.reasons__container {
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.reasons__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: 447px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        width: 450px;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 370px;
+        margin-right: 130px;
+        margin-left: 100px;
+    }
+}
+
+.reasons__item {
+    width: 194px;
+    padding: 20px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: $bg-color;
+
+    &:nth-child(2n) {
+        margin-top: 35px;
+        margin-bottom: -35px;
+    }
+
+    @media (max-width: 447px) {
+        &:nth-child(2n) {
+            margin: unset;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        width: 210px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 170px;
+    }
+}
+
+.reasons__number {
+    @include fontStyle(700, 42px, 57px, 0.05em);
+
+    margin-bottom: 6px;
+    display: flex;
+
+    &::after {
+        @include fontStyle(600, 16px, 22px, 0.02em);
+
+        content: '+';
+        margin-left: 2px;
+        color: $accent-color;
+    }
+}
+
+.reasons__text {
+    @include fontStyle(600, 11px, 15px, 0.02em);
+}
+
+.reasons__subtitle {
+    @extend %subtitle;
+}
+
+.reasons__title {
+    @extend %title;
+
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+        max-width: 420px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 412px;
+    }
+}
+
+.reasons__description {
+    margin-bottom: 44px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 500px;
+    }
+
+    @include fontStyle(400, 18px, 30px, 0.02em);
+    color: $third-color;
+}
