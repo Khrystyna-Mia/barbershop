@@ -2,14 +2,14 @@
 .prices {
     @extend %section;
 
-    background-image: url('../../images/prices/img-mob.png'), 
+    background-image: url('../images/prices/img-mob.png'), 
         linear-gradient(#111319, #111319);
-    background-image: -webkit-image-set(url('../../images/prices/img-mob.w.webp') 1x),
+    background-image: -webkit-image-set(url('../images/prices/img-mob.w.webp') 1x),
         linear-gradient(#111319, #111319);
     
-    background-image: url('../../images/prices/img-mob@2x.png'), 
+    background-image: url('../images/prices/img-mob@2x.png'), 
         linear-gradient(#111319, #111319);
-    background-image: -webkit-image-set(url('../../images/prices/img-mob@2x.w.webp') 2x),
+    background-image: -webkit-image-set(url('../images/prices/img-mob@2x.w.webp') 2x),
         linear-gradient(#111319, #111319);
 
     background-position: center;
@@ -17,27 +17,27 @@
     background-size: 480px 826px;
 
     @media screen and (min-width: 480px) and (min-width: 768px) {
-        background-image: url('../../images/prices/img-tab.png'), 
+        background-image: url('../images/prices/img-tab.png'), 
             linear-gradient(#111319, #111319);
-        background-image: -webkit-image-set(url('../../images/prices/img-tab.w.webp') 1x),
+        background-image: -webkit-image-set(url('../images/prices/img-tab.w.webp') 1x),
             linear-gradient(#111319, #111319);
 
-        background-image: url('../../images/prices/img-tab@2x.png'), linear-gradient(#111319, #111319);
-        background-image: -webkit-image-set(url('../../images/prices/img-tab@2x.w.webp') 2x),
+        background-image: url('../images/prices/img-tab@2x.png'), linear-gradient(#111319, #111319);
+        background-image: -webkit-image-set(url('../images/prices/img-tab@2x.w.webp') 2x),
             linear-gradient(#111319, #111319);
         
         background-size: 768px 858px;
     }
 
     @media screen and (min-width: 1280px) {
-        background-image: url('../../images/prices/img-desk.png'), 
+        background-image: url('../images/prices/img-desk.png'), 
             linear-gradient(#111319, #111319);
-        background-image: -webkit-image-set(url('../../images/prices/img-desk.w.webp') 1x),
+        background-image: -webkit-image-set(url('../images/prices/img-desk.w.webp') 1x),
             linear-gradient(#111319, #111319);
 
-        background-image: url('../../images/prices/img-desk@2x.png'),
+        background-image: url('../images/prices/img-desk@2x.png'),
             linear-gradient(#111319, #111319);
-        background-image: -webkit-image-set(url('../../images/prices/img-desk@2x.w.webp') 2x),
+        background-image: -webkit-image-set(url('../images/prices/img-desk@2x.w.webp') 2x),
             linear-gradient(#111319, #111319);
 
         background-size: 1200px 718px;
