@@ -1,0 +1,32 @@
+/* Footer */
+.footer {
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+.footer__container {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.footer__copy {
+    @include fontStyle(600, 11px, 15px, 0.2em);
+    color: $text-color;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer__social {
+    width: 270px;
+    margin-bottom: 20px;
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: unset;
+        margin-left: unset;
+    }
+}
