@@ -7,6 +7,7 @@
   width: 100%;
   padding-top: 40px;
   padding-bottom: 27px;
+  color: $secondary-color;
 
   @include mq(tablet) {
     @include fontStyle(600, 12px, 16px, 0.1em);
@@ -26,22 +27,23 @@
 }
 
 .header__logo {
+  color: $secondary-color;
+
   @include mq(tablet-only) {
     align-self: flex-start;
     margin-right: 70px;
     margin-left: 10px;
-    fill: $primary-color;
+    color: $primary-color;
   }
 
   @include mq(desktop) {
     margin-right: 70px;
-    fill: $primary-color;
+    color: $primary-color;
   }
 }
 
 .header__icon {
   display: block;
-  fill: $primary-color;
 
   @include mq(tablet) {
     width: 65px;
@@ -118,7 +120,7 @@
   width: 24px;
   height: 3px;
 
-  // background-color: $secondary-color;
+  background-color: $secondary-color;
   transition: transform 300ms linear, background-color 300ms linear;
 
   &:not(:last-child) {
@@ -129,7 +131,7 @@
     background-color: $primary-color;
   }
 
-  .burger__btn.is-open &--top {
+  .burger__btn.is-open &--top{
     transform: translateY(6px) rotate(45deg);
     transition-delay: 150ms;
   }

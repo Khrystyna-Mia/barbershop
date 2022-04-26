@@ -58,7 +58,7 @@
     }
 }
 
-.abaut__text {
+.about__text {
     @include fontStyle(400, 16px, 26px, 0.02em);
     margin-bottom: 20px;
 
@@ -67,7 +67,7 @@
     }
 }
 
-.abaut__description {
+.about__description {
     @include fontStyle(400, 14px, 26px, 0.02em);
     margin-bottom: 40px;
 }

@@ -1,7 +1,7 @@
 /* Masters */
 .masters {
     @extend %section;
-    color: $third-color;
+    background-color: $bg-color;
 }
 
 .masters__container {
@@ -12,6 +12,7 @@
 
 .masters__subtitle {
     @extend %subtitle;
+    color: $primary-color;
 }
 
 .masters__title {
@@ -52,6 +53,8 @@
 
     margin-top: 30px;
     margin-bottom: 8px;
+
+    color: $primary-color;
 }
 
 .masters__description {
@@ -73,5 +76,6 @@
     height: 44px;
     padding: 12px;
     border-radius: 50%;
-    background-color: $bg-color;
+    color: $primary-color;
+    background-color: $secondary-color;
 }
