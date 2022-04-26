@@ -8,16 +8,15 @@
   padding-top: 40px;
   padding-bottom: 27px;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     @include fontStyle(600, 12px, 16px, 0.1em);
     padding-bottom: 40px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     padding-top: 44px;
     padding-bottom: 44px;
   }
-  // color: $secondary-color;
 }
 
 .header__container {
@@ -27,26 +26,24 @@
 }
 
 .header__logo {
-  // color: $secondary-color;
-
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     align-self: flex-start;
     margin-right: 70px;
     margin-left: 10px;
-    color: $primary-color;
+    fill: $primary-color;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     margin-right: 70px;
-    color: $primary-color;
+    fill: $primary-color;
   }
 }
 
 .header__icon {
   display: block;
-  color: $primary-color;
+  fill: $primary-color;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 65px;
     height: 55px;
   }
@@ -56,7 +53,7 @@
 .nav {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -67,7 +64,7 @@
   display: flex;
   gap: 24.25px;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     gap: 40px;
   }
 }
@@ -79,11 +76,11 @@
 }
 
 .nav__wrapper {
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     text-align: center;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     display: flex;
     flex-direction: row-reverse;
     gap: 40px;
@@ -93,7 +90,7 @@
 .nav__btn {
   @extend %btn;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     margin-bottom: 20px;
   }
 }
@@ -111,7 +108,7 @@
   background-color: inherit;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     display: none;
   }
 }
@@ -168,7 +165,7 @@
     visibility: visible;
   }
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     display: none;
   }
 }
@@ -214,7 +211,7 @@
 }
 
 .mobile-menu__social {
-  font-size: 14px;
+  @include fontStyle(600, 14px, 19px, 0.2em);
 
   flex-direction: column;
   gap: 24px;

@@ -11,36 +11,36 @@
 .about__aside {
     display: none;
 
-    @media scren and (min-width: 768px) and (max-width: 1280px) {
-        flex-direction: column;
-        margin-right: 30px;
-    }
-
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: flex;
         width: 330px;
         gap: 30px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(tablet-only) {
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    @include mq(desktop) {
         width: 570px;
         margin-right: 64px;
     }
 }
 
 .about__img {
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 270px;
         height: 445px;
     }
 }
 
 .about__content {
-    @media scren and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         width: 330px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 500px;
     }
 }
@@ -53,17 +53,16 @@
 .about__title {
     @extend %title;
 
-    @media screen and (max-width: 1280px) {
-        font-size: 42px;
+    @include mq(not-desktop) {
+        font-size: 28px;
     }
 }
 
 .abaut__text {
-    font-size: 16px;
-    line-height: calc(26 / 16);
+    @include fontStyle(400, 16px, 26px, 0.02em);
     margin-bottom: 20px;
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         @include fontStyle(400, 18px, 30px, 0.02em);
     }
 }

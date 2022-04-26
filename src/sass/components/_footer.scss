@@ -5,7 +5,7 @@
 }
 
 .footer__container {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -25,7 +25,7 @@
     margin-bottom: 20px;
     margin-left: auto;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         margin-bottom: unset;
         margin-left: unset;
     }

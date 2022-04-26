@@ -8,29 +8,29 @@
   
     background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
   
-    @media screen and (max-width: 480px) {
+    @include mq(s-mobile) {
       min-height: calc(100vw * 1.21);
     }
   
-    @media screen and (min-width: 480px) {
+    @include mq(mobile) {
       max-width: 480px;
       margin-right: auto;
       margin-left: auto;
       overflow: hidden;
     }
   
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       max-width: 768px;
       background: none;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       max-width: 1280px;
     }
   }
   
   .hero__container {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
     }
   }
@@ -38,25 +38,25 @@
   .hero__aside {
     display: none;
   
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
       align-items: flex-end;
       padding-bottom: 40px;
     }
   
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
       width: 113px;
       padding-left: 30px;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       width: 97px;
       padding-left: 17px;
     }
   }
   
   .hero__social {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       transform-origin: top left;
       transform: rotate(-90deg) translate(-15px);
       color: $primary-color;
@@ -67,22 +67,22 @@
     width: 100%;
     padding-top: 208px;
   
-    @media screen and (max-width: 480px) {
+    @include mq(s-mobile) {
       padding-top: calc(10px + 30vw);
     }
   
-    @media screen and (min-width: 480px) {
+    @include mq(mobile) {
       padding-bottom: 183px;
     }
   
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       padding-bottom: 237px;
       padding-left: 70px;
   
       background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       max-width: 1073px;
       padding-bottom: 181px;
       padding-left: 96px;
@@ -99,27 +99,27 @@
     font-size: 48px;
     color: $secondary-color;
   
-    @media screen and (max-width: 480px) {
+    @include mq(s-mobile) {
       font-size: calc(40px + 1vw);
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       font-size: 72px;
     }
   }
   
   .hero__text {
     max-width: 306px;
-    font-size: 16px;
-    line-height: 1.62;
-  
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include fontStyle(400, 16px, 26px, 0.02em);
+
+    @include mq(tablet-only) {
       max-width: 349px;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       max-width: 400px;
-      font-size: 18px;
+      @include fontStyle(400, 18px, 30px, 0.02em);
+
     }
   }
 
@@ -130,18 +130,18 @@
     left: 0;
     z-index: -1;
   
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       padding-left: 153px;
     }
   }
   
   .slider__img {
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
       width: 576px;
       height: 680px;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       width: 1073px;
       height: 680px;
     }
@@ -157,11 +157,11 @@
     justify-content: space-between;
     align-items: center;
   
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
       display: flex;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       right: 108px;
     }
   }
@@ -226,11 +226,11 @@
     bottom: 50%;
     display: block;
   
-    @media screen and (max-width: 480px) {
+    @include mq(s-mobile) {
       right: 15px;
     }
   
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       right: 111px;
     }
   }

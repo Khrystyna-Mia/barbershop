@@ -4,17 +4,17 @@
     padding-bottom: calc(84px + 35px);
     color: $primary-color;
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         padding-bottom: calc(100px + 35px);
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         padding-bottom: calc(130px + 35px);
     }
 }
 
 .reasons__container {
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         display: flex;
         flex-direction: row-reverse;
     }
@@ -30,12 +30,12 @@
         align-items: center;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         width: 450px;
         margin-left: auto;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 370px;
         margin-right: 130px;
         margin-left: 100px;
@@ -65,11 +65,11 @@
         }
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         width: 210px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 170px;
     }
 }
@@ -100,11 +100,11 @@
 .reasons__title {
     @extend %title;
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         max-width: 420px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         max-width: 412px;
     }
 }
@@ -112,7 +112,7 @@
 .reasons__description {
     margin-bottom: 44px;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         max-width: 500px;
     }
 

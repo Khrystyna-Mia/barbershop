@@ -1,8 +1,8 @@
 /* Wrapper */
 .wrapper {
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         display: flex;
-        max-width: 1200px;
+        max-width: 1280px;
         margin-right: auto;
         margin-left: auto;
     }
@@ -17,12 +17,12 @@
     background-repeat: no-repeat;
     background-size: 480px 557px;
 
-    @media screen and (min-width: 768px) {
-        text-align: center;
+    @include mq(tablet) {
+        text-align: unset;
         background-size: 768px 521px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         max-width: 655px;
         padding-right: 25px;
         padding-left: 40px;
@@ -36,20 +36,20 @@
     margin-bottom: 44px;
     color: $secondary-color;
 
-    @media screen and (max-width: 480px) {
+    @include mq(s-mobile) {
         font-size: calc(18px + 5vw);
     }
 }
 
 .online-subs__form {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         display: grid;
         grid-template-columns: 330px 330px;
         column-gap: 30px;
         row-gap: 44px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         grid-template-columns: 270px 260px;
     }
 }
@@ -58,13 +58,13 @@
     display: block;
     margin-bottom: 44px;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         margin-bottom: unset;
     }
 }
 
 .online-subs__label--textarea {
-    @media screen and (min-width: 1280px) {
+    @include mq(tablet) {
         grid-column: 1 / 3;
     }
 }
@@ -107,7 +107,7 @@
     margin-left: auto;
     color: $secondary-color;
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet) {
         grid-column: 1 / 2;
         margin-left: unset;
     }
@@ -121,30 +121,34 @@
     background-image: -webkit-image-set(url('../images/contacts/Bg-desk.w.webp') 1x),
         linear-gradient(#111319, #111319);
 
-    background-image: url('../images/contacts/Bg-desk@2x.png'), 
+    @include mq(retina) {
+        background-image: url('../images/contacts/Bg-desk@2x.png'), 
         linear-gradient(#111319, #111319);
     background-image: -webkit-image-set(url('../images/contacts/Bg-desk@2x.w.webp') 2x),
         linear-gradient(#111319, #111319);
-
+    }
+   
     background-position: center;
     background-repeat: no-repeat;
     background-size: 480px 496px;
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         background-image: url('../images/contacts/bg-tab.png'), 
             linear-gradient(#111319, #111319);
         background-image: -webkit-image-set(url('../images/contacts/bg-tab.w.webp') 1x),
             linear-gradient(#111319, #111319);
 
-        background-image: url('../images/contacts/bg-tab@2x.png'),
+        @include mq(retina) {
+            background-image: url('../images/contacts/bg-tab@2x.png'),
             linear-gradient(#111319, #111319);
         background-image: -webkit-image-set(url('../images/contacts/bg-tab@2x.w.webp') 2x),
             linear-gradient(#111319, #111319);
+        }
         
         background-size: 768px 449px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 625px;
         padding-left: 85px;
         background-image: url('../images/contacts/Bg-desk.png'), 
@@ -152,17 +156,19 @@
         background-image: -webkit-image-set(url('../images/contacts/Bg-desk.w.webp') 1x),
             linear-gradient(#111319, #111319);
 
+        @include mq(retina) {
         background-image: url('../images/contacts/Bg-desk@2x.png'),
-            linear-gradient(#111319, #111319);
+        linear-gradient(#111319, #111319);
         background-image: -webkit-image-set(url('../images/contacts/Bg-desk@2x.w.webp') 2x),
-            linear-gradient(#111319, #111319);
+        linear-gradient(#111319, #111319);
+        }
     
         background-size: 625px 644px;
     }
 }
 
 .contacts__container {
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         display: grid;
         grid-template-columns: 330px 330px;
         column-gap: 30px;
@@ -176,12 +182,12 @@
     margin-bottom: 40px;
     color: $secondary-color;
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         text-align: unset;
         margin-bottom: unset;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         text-align: unset;
     }
 }
@@ -190,12 +196,12 @@
     font-style: normal;
     margin-bottom: 44px;
 
-    @media screen and (min-width: 768px) and (max-width: 1280px) {
+    @include mq(tablet-only) {
         margin-bottom: unset;
         grid-column: 1 / 2;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         max-width: 270px;
         margin-bottom: 70px;
     }

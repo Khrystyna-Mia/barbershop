@@ -27,11 +27,12 @@
 
 %link {
   display: block;
-  transition: color 300ms linear;
+  transition: color 300ms linear, fill 300ms linear;
 
   &:hover,
   &:focus {
     color: #ff6c00;
+    fill: #ff6c00;
     outline: none;
   }
 }
@@ -67,18 +68,28 @@
   padding-top: 84px;
   padding-bottom: 84px;
 
-  @media screen and (max-width: 768px) {
-    margin: 0 auto;
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @include mq(tablet-only) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     padding-top: 130px;
     padding-bottom: 130px;
   }
+
+  // @media screen and (max-width: 768px) {
+  //   margin: 0 auto;
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   padding-top: 100px;
+  //   padding-bottom: 100px;
+  // }
+
+  // @media screen and (min-width: 1280px) {
+  //   padding-top: 130px;
+  //   padding-bottom: 130px;
+  // }
 }

@@ -4,19 +4,27 @@
   margin-right: auto;
   margin-left: auto;
 
+//   max-width: 448px;
+
+//   @include mq(tablet-only) {
+//     max-width: 720px;
+//   }
+
+//   @include mq(desktop) {
+//     max-width: 1200px;
+//   }
+
   @media screen and (min-width: 480px) {
-    width: 480px;
+    width: 448px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-right: 35px;
-    padding-left: 35px;
+    width: 720px;
   }
 
   @media screen and (min-width: 1280px) {
-    width: 1280px;
-    padding-right: 115px;
-    padding-left: 115px;
+    width: 1200px;
   }
 }
+
+

@@ -5,7 +5,7 @@
 }
 
 .masters__container {
-    @media screen and (min-width: 768px) {
+    @include mq(tablet-only) {
         max-width: 450px;
     }
 }
@@ -23,7 +23,7 @@
     display: grid;
     gap: 64px;
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         grid-template-columns: 370px 370px 370px;
         gap: 30px;
     }
@@ -34,15 +34,15 @@
 }
 
 .masters__img {
-    @media screen and (min-width: 480px) {
+    @include mq(s-mobile) {
         width: 100%;
     }
 
-    @media screen and (min-width: 768px) {
+    @include mq(tablet-only) {
         width: 450px;
     }
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
         width: 370px;
     }
 }
