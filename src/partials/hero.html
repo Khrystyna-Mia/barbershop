@@ -23,7 +23,7 @@
     </div>
     
 <!-- Slider -->
-    <div class="slider-contain">
+    <div class="slider__contain">
         <div class="slider">
             <picture>
                 <source srcset="./images/hero/Slider1-mob.w.webp 1x, ./images/hero/Slider1-mob@2x.w.webp 2x" type="image/webp"
@@ -40,7 +40,9 @@
                     media="(min-width: 1200px)" />
                 <img class="slider__img" src="./images/hero/Slider1.jpg" alt="Барбер укладывает волосы клиенту" width="480" height="580"/>
             </picture>
+        </div>
 
+        <div class="slider">
             <picture>
                 <source srcset="./images/hero/Slider2-mob.w.webp 1x, ./images/hero/Slider2-mob@2x.w.webp 2x" type="image/webp"
                     media="(max-width: 767px)" />
@@ -56,7 +58,9 @@
                     media="(min-width: 1200px)" />
                 <img class="slider__img" src="./images/hero/Slider2.jpg" alt="Барбер берет в руки опасную бритву" width="480" height="580" />
             </picture>
+        </div>   
 
+        <div class="slider">
             <picture>
                 <source srcset="./images/hero/Slider3-mob.w.webp 1x, ./images/hero/Slider3-mob@2x.w.webp 2x" type="image/webp"
                     media="(max-width: 767px)" />
@@ -73,17 +77,25 @@
                 <img class="slider__img" src="./images/hero/Slider3.jpg" alt="Барбер делет волосы на зоны для стрижки" width="480" height="580" />   
             </picture>
         </div>
+
+        <div class="slider__controls">
+            <button aria-label="Previous" class="prev" data-slider-prev>
+                <span class="slider__text">Наза</span>д
+            </button>
+    
+            <button aria-label="Next" class="next">
+                <span class="slider__text" data-slider-next>Впере</span>д
+            </button>
+        </div>
+
+        <div class="slider__marks">
+            <button class="slider__line" data-slider-line></button>
+            <button class="slider__line" data-slider-line></button>
+            <button class="slider__line" data-slider-line></button>
+        </div>
     </div>
 
-    <div class="slider-controls">
-        <button aria-label="Previous" class="slider-controls__prev">
-            <span class="slider-controls__text">Наза</span>д
-        </button>
-
-        <button aria-label="Next" class="slider-controls__next">
-            <span class="slider-controls__text">Впере</span>д
-        </button>
-    </div>
-
-    <div class="slider__dots" role="tablist"></div>
+    <button id="btn" title="to top" aria-label="go to top" data-button-top>
+        <i class="fa-solid fa-angles-up"></i>    
+    </button>
 </section>
