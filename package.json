@@ -26,6 +26,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001320"
+    "caniuse-lite": "^1.0.30001320",
+    "glider-js": "^1.7.7"
   }
 }
